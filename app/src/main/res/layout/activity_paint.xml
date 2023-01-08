@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaintActivity">
+
+    <FrameLayout
+        android:id="@+id/frm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+
+    </FrameLayout>
+
+
+
+    <ImageView
+        android:id="@+id/colorPicker"
+        android:layout_width="410dp"
+        android:layout_height="70dp"
+        android:scaleType="fitXY"
+
+        android:src="@drawable/colors" />
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnRect"
+        android:layout_alignParentStart="true"
+        android:onClick="switchFillType"
+        android:text="Switch" />
+
+
+    <Button
+        android:id="@+id/buttonPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="97dp"
+        android:onClick="increaseSize"
+        android:text="Size+" />
+
+    <Button
+        android:id="@+id/showBiggest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="95dp"
+        android:layout_marginBottom="60dp"
+        android:onClick="showBiggest"
+        android:text="Biggest" />
+
+
+    <Button
+        android:id="@+id/buttonMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="137dp"
+        android:onClick="decreaseSize"
+        android:text="Size-" />
+    <!--    <Button-->
+    <!--        android:id="@+id/btnGreen"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignParentTop="true"-->
+    <!--        android:layout_marginRight="10dp"-->
+    <!--        android:backgroundTint="#4CAF50"-->
+    <!--        android:onClick="changeColor"-->
+    <!--        android:padding="10dp"-->
+    <!--        android:tag="#4CAF50"-->
+    <!--        android:textSize="20dp"-->
+    <!--        tools:visibility="visible" />-->
+    <!--    <Button-->
+    <!--        android:id="@+id/btnBlue"-->
+    <!--        android:tag="#3F51B5"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignParentTop="true"-->
+    <!--        android:layout_toRightOf="@id/btnGreen"-->
+    <!--        android:layout_marginRight="10dp"-->
+    <!--        android:onClick="changeColor"-->
+    <!--        android:padding="10dp"-->
+    <!--        android:backgroundTint="#3F51B5"-->
+    <!--        android:textSize="20dp"/>-->
+    <!--    <Button-->
+    <!--        android:id="@+id/btnRed"-->
+    <!--        android:tag="#F44336"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignParentTop="true"-->
+    <!--        android:layout_toRightOf="@id/btnBlue"-->
+    <!--        android:onClick="changeColor"-->
+    <!--        android:backgroundTint="#F44336"-->
+    <!--        android:layout_marginRight="10dp"-->
+    <!--        android:padding="10dp"-->
+    <!--        android:textSize="20dp"/>-->
+    <!--    <Button-->
+    <!--        android:id="@+id/btnYellow"-->
+    <!--        android:tag="#FFEB3B"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignParentTop="true"-->
+    <!--        android:layout_toRightOf="@id/btnRed"-->
+    <!--        android:onClick="changeColor"-->
+    <!--        android:layout_marginRight="10dp"-->
+    <!--        android:padding="10dp"-->
+    <!--        android:backgroundTint="#FFEB3B"-->
+    <!--        android:textSize="20dp"/>-->
+
+
+    <Button
+        android:id="@+id/btnLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btnRect"
+        android:onClick="addLine"
+        android:tag="Line"
+        android:text="Line"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnRect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@id/btnLine"
+        android:onClick="addRect"
+        android:tag="Rect"
+        android:text="Rect"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnCircle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btnRect"
+        android:layout_toRightOf="@id/btnPath"
+        android:onClick="addCircle"
+        android:text="Circle"
+        android:textSize="16sp" />
+    <Button
+        android:id="@+id/btnPath"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addPath"
+        android:layout_alignTop="@id/btnRect"
+        android:layout_toRightOf="@id/btnRect"
+        android:text="Path"
+        android:textSize="16sp"/>
+    <Button
+        android:id="@+id/btnPoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="clear"
+        android:background="@drawable/clear"
+        android:layout_toRightOf="@id/btnCircle"
+        android:textSize="16sp"/>
+</RelativeLayout>
